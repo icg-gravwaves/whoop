@@ -31,3 +31,6 @@ button,select{min-height:44px}
 
 .countdown.found{color:var(--success)}.countdown.found small{margin:8px 0 0;color:var(--text)}
 .aside-note p{font-family:var(--font-note);font-size:15px;line-height:1.5;color:var(--text)}
+
+/* Header logos fill the header height: Whoop! mark on the left, GW Piano card on the right. */
+header{height:auto;min-height:110px;padding-top:10px;padding-bottom:10px}.brand img{width:80px;height:80px}header .gwpiano-link img{width:142px;height:80px}@media(max-width:540px){.brand img{width:56px;height:56px}header .gwpiano-link img{width:100px;height:56px}}

@@ -2,17 +2,17 @@
 :root {
   color-scheme: dark;
   --brand-purple: #621360;
-  --brand-purple-dark: #3c023c;
-  --brand-blue: #0078b4;
-  --brand-blue-bright: #00a0ff;
-  --bg: #16101e;
-  --panel: #231a2d;
-  --surface: #30233d;
-  --line: #7e6b91;
-  --muted: #bcb1c9;
-  --text: #f7f3fa;
+  --brand-purple-dark: #3c0238;
+  --brand-blue: #0076a6;
+  --brand-blue-bright: #009ee2;
+  --bg: #000000;
+  --panel: #0b1a2b;
+  --surface: #12263b;
+  --line: #2f4a66;
+  --muted: #b6bfcc;
+  --text: #f4f6f9;
   --accent: #d5a5ed;
-  --signal: #70ceff;
+  --signal: #009ee2;
   --on-accent: #24102c;
   --white: #ffffff;
   --black: #000000;
@@ -20,14 +20,14 @@
   --key-ink: #313131;
   --key-dark: #171717;
   --key-black: #050505;
-  --success: #a9df98;
+  --success: #dcfd35;
   --warning: #ffc56e;
-  --danger: #ff8eac;
+  --danger: #e2147e;
   --accent-glow: #d5a5ed55;
-  --signal-glow: #70ceff55;
+  --signal-glow: #009ee255;
   --accent-wash: #d5a5ed22;
   --accent-subtle: #d5a5ed0f;
-  --overlay: #16101edd;
-  --overlay-light: #16101e55;
+  --overlay: #000000dd;
+  --overlay-light: #00000055;
   --shadow: #00000088;
 }

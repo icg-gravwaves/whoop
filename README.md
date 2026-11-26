@@ -1,4 +1,4 @@
-# Chirp Lab
+# Whoop!
 
 A browser-based outreach game: reproduce a rising gravitational-wave-style chirp with your voice, then find it through increasing simulated noise and signal consistency checks.
 
@@ -8,7 +8,7 @@ Serve `dist/` with any static web server, or run `npm start` and open http://loc
 
 ## Play
 
-Select **Start** and allow the microphone. The reference chirp plays first; then stay quiet during the three-second countdown, then hum or whistle a low-to-high sweep for 1.5 seconds. The first countdown second measures the room noise. The microphone turns off after each attempt; press the button again to retry. You can cancel during the countdown or recording. The reference chirp also lasts 1.5 seconds.
+Select **Start** and allow the microphone. The reference chirp plays first; after that the microphone stays on and listens continuously. Hum or whistle a low-to-high sweep (about 1.5 seconds) whenever you are ready, and as often as you like: each sound is scored when you pause. Room noise is estimated from the quiet moments between attempts. Press **Stop** to turn the microphone off.
 
 Five levels introduce simulated noise, an envelope consistency check, and a sine-Gaussian veto analogy. Select a low, standard, or whistle register in **Inside the detector**. Progress is stored locally in the browser.
 
@@ -32,10 +32,14 @@ Capture uses Web Audio's ScriptProcessorNode for compatibility. This API is depr
 
 `dist/app.js` controls the experience, `dist/dsp.js` calculates scores. Tests exercise noise, silence, inconsistent envelopes, glitches, and the sound segmentation helper.
 
-The logo pairs an open orbit with a waveform increasing in amplitude and frequency. `dist/assets/chirp-lab.svg` is the transparent mark; `dist/assets/chirp-lab-mark.svg` is the dark tile and favicon. Colours: lime `#d6f489`, dark teal `#10191d`, cyan `#72d4d2`.
+The logo pairs an open orbit with a waveform increasing in amplitude and frequency. `dist/assets/whoop.svg` is the transparent mark; `dist/assets/whoop-mark.svg` is the dark tile and favicon. Colours come from `dist/theme.css`: light purple and blue on dark purple surfaces.
 
 ## GitHub Pages
 
 The Pages workflow tests the application and deploys `dist/` on every push to `main`. In repository **Settings → Pages**, the build source must be **GitHub Actions**. Workflow permissions grant Pages deployment access only to the deployment job. Assets use relative URLs for project-site hosting.
 
 University of Portsmouth and PyCBC logos link to their respective websites. The original assets are from [Portsmouth's official site](https://www.port.ac.uk/themes/custom/portsmouth/logo.svg) and the [PyCBC logo repository](https://github.com/gwastro/pycbc-logo). A thin white outline is applied at display time to improve contrast on the dark background.
+
+## Shared colour palette
+
+`dist/theme.css` and the project logos are generated from the parent workspace’s `branding/palette.json`. From this repository, run `python3 ../scripts/sync_palette.py` before deployment, or add `--check` to verify synchronization. The canvas reads the same CSS properties as the interface. See `../branding/README.md` for the source colours and workflow. Deployment uses self-contained generated assets and needs no parent folder.

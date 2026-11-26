@@ -48,3 +48,12 @@ body{font-size:16px}.brief,.result p,.status,.legend,.below p,.science-body{font
 .level.done{background:var(--success)}.level.current,.level.active{background:var(--accent);color:var(--black)}.level.future{background:var(--signal)}
 .level .num{font-family:var(--font-heading);font-size:26px;width:auto;min-width:32px;height:auto;border:0;background:none;color:var(--black);flex:none}
 .level:disabled{opacity:.45}
+
+/* Partner logos sit on coloured cards in their own colours (white for the ICG logo, as its brand guidelines expect; blue for PyCBC), without the white outline used on dark backgrounds. */
+header .project-logos a{background:var(--white);border-radius:7px;padding:8px 14px;display:flex;align-items:center;height:96px}
+header .project-logos a img{filter:none!important}header .portsmouth-logo{height:76px;width:auto}header .pycbc-logo{width:140px}
+@media(max-width:540px){header .project-logos a{height:70px;padding:6px 10px}header .portsmouth-logo{height:52px}header .pycbc-logo{width:110px}}
+header .project-logos a:has(.pycbc-logo){background:var(--signal)}
+/* Keep the wide ICG logo, PyCBC and GW Piano on one header row down to tablet width. */
+header .project-logos{gap:14px}header .project-logos a{height:84px;padding:6px 12px}header .portsmouth-logo{height:70px}header .pycbc-logo{width:120px}
+@media(max-width:1000px){header .portsmouth-logo{height:56px}header .pycbc-logo{width:100px}header .project-logos a{height:70px}}

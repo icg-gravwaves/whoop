@@ -34,3 +34,17 @@ button,select{min-height:44px}
 
 /* Header logos fill the header height: Whoop! mark on the left, GW Piano card on the right. */
 header{height:auto;min-height:110px;padding-top:10px;padding-bottom:10px}.brand img{width:80px;height:80px}header .gwpiano-link img{width:142px;height:80px}@media(max-width:540px){.brand img{width:56px;height:56px}header .gwpiano-link img{width:100px;height:56px}}
+
+/* Readable sizes for a busy outreach stand: nothing in the game panel below 12px, larger again in full screen. */
+body{font-size:16px}.brief,.result p,.status,.legend,.below p,.science-body{font-size:15px}.intro p{font-size:18px}
+.eyebrow,.section-label,.scope-top,.axis,.legend>span:last-child,.pill,.score-note,.metrics span,.metrics p,#micOff,#reset{font-size:12px}
+.metrics b{font-size:11px}.level strong{font-size:14px}.level small{font-size:12px}.level .num{font-size:12px;width:32px;height:32px}
+.primary,.secondary,.fs-btn{font-size:15px}.masses{font-size:15px}.metrics strong{font-size:36px}
+.masses .sun{font-family:var(--font-body);font-weight:600;font-size:.6em;vertical-align:-.15em;margin-left:.04em}
+.workspace.fs .brief,.workspace.fs .status,.workspace.fs .result p{font-size:18px}.workspace.fs .scope-top,.workspace.fs .axis,.workspace.fs .legend{font-size:14px}.workspace.fs h2{font-size:32px}.workspace.fs .primary,.workspace.fs .secondary{font-size:18px}
+
+/* Level tiles: completed = lime with a black tick, current = lilac, still to come = blue; the whole tile is coloured, with large numbers in the heading font. */
+.level{color:var(--black);border:0;border-radius:8px}.level strong,.level small{color:var(--black)}
+.level.done{background:var(--success)}.level.current,.level.active{background:var(--accent);color:var(--black)}.level.future{background:var(--signal)}
+.level .num{font-family:var(--font-heading);font-size:26px;width:auto;min-width:32px;height:auto;border:0;background:none;color:var(--black);flex:none}
+.level:disabled{opacity:.45}
